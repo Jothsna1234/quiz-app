@@ -1,0 +1,128 @@
+/* Main grid container */
+.login-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    height: 100vh;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 50px; /* Adjust height according to the image */
+    background-image: url('/src/components/logo.png'); /* Use the correct path to your logo here */
+    background-repeat: no-repeat;
+    background-size: contain; /* Ensures the image fits within the size */
+}
+
+/* Left section (blue background with logo in the top left corner) */
+.login-left-section {
+    background-color: #0FB0FB; /* Blue background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Logo at the top */
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    align-self: flex-start;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Right section (boy image at the top and form below) */
+.login-right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align the boy image at the top */
+    align-items: center;
+    background-color: #f0f4f7;
+    padding: 20px;
+}
+
+.boy-image {
+    width: 200px;
+    height: 200px;
+    background-image: url('/src/components/boy.png'); /* Replace with the actual image path */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+/* Form container */
+.login-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-input {
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-button {
+    margin: 10px 0;
+  
+    background-color: #0FB0FB;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+ 
+    font-size: 1.2rem;
+        padding: 10px 40px;
+}
+
+.login-button:hover {
+    background-color: #0FB0FB;
+}
+
+.forgot-password {
+    color: #0FB0FB;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .login-grid-container {
+        grid-template-columns: 1fr; /* Stacks the two sections vertically */
+    }
+
+    .boy-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .login-form-container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,79 @@
+/* Main layout */
+.welcome-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    background-color: #f0f4f7;
+}
+
+/* Left section */
+.left-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #35a4f3, #89d7f6);
+    color: white;
+}
+
+/* Logo in the top-left corner */
+.left-section .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 50px; /* Adjust height according to the image */
+    background-image: url('/src/components/logo.png'); /* Use the correct path to your logo here */
+    background-repeat: no-repeat;
+    background-size: contain; /* Ensures the image fits within the size */
+}
+
+/* Centered text */
+.left-section h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Right section */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.auth-button {
+    margin: 10px;
+    padding: 15px 60px;
+    background-color: #0FB0FB;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #0FB0FB;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .welcome-page {
+        grid-template-columns: 1fr;
+    }
+
+    .left-section h1 {
+        font-size: 3rem;
+    }
+
+    .auth-button {
+        font-size: 1.2rem;
+    }
+}
